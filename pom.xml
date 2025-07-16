@@ -1,0 +1,60 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.sun.tools</groupId>
+    <artifactId>bean-method-executor</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>Bean Method Executor</name>
+    <description>反射调用Spring Bean方法的工具类</description>
+
+    <dependencies>
+        <!-- Spring 核心依赖 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.3.30</version>
+        </dependency>
+        <!-- SLF4J API -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.7</version>  <!-- 最新稳定版本，使用时可根据需要调整 -->
+        </dependency>
+
+        <!-- 简单日志实现：slf4j-simple -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>2.0.7</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- Spring Boot Test Starter (包含了大部分测试依赖) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <version>2.7.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Spring Boot Starter (基础 Spring Boot 功能) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <version>2.7.0</version>
+        </dependency>
+
+        <!-- Mockito Inline (支持静态方法 Mock，这个很重要!) -->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-inline</artifactId>
+            <version>4.6.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
