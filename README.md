@@ -32,13 +32,15 @@
    ```bash
    mvn clean install
 2. 在你的项目中添加依赖：
-   ```xml
+   ``` xml
    <dependency>
      <groupId>com.sun.tools</groupId>
      <artifactId>bean-method-executor</artifactId>
      <version>1.0.0</version>
    </dependency>
-3. 🚀  使用示例 
+   ```
+3. 🚀  使用示例
+
  调用无参数方法
 ``` java
  Object result = BeanMethodExecutor.invoke("myService", "noParamMethod");
@@ -59,7 +61,7 @@
        log.error("调用失败", e);
    }
 ```
-4. 🧩 核心方法一览
+🧩 核心方法一览
    | 方法名                                                        | 描述                   |
    | ---------------------------------------------------------- | -------------------- |
    | `invoke(String beanName, String methodName, Object...)`    | 通过 Bean 名称调用方法       |
@@ -70,9 +72,9 @@
    | `getCacheSize()`                                           | 获取当前缓存的方法数量          |
 
 📌 注意事项
-   方法调用时，内部支持缓存避免多次反射。
-   若方法不存在、参数不匹配或反射失败，统一抛出 BeanMethodExecutionException。
-   支持私有方法、方法重载、参数为 null 情况。 
-   方法参数支持自动类型匹配，包括基本类型与包装类型的兼容。
+   1. 方法调用时，内部支持缓存避免多次反射。
+   2. 若方法不存在、参数不匹配或反射失败，统一抛出 BeanMethodExecutionException。
+   3. 支持私有方法、方法重载、参数为 null 情况。 
+   4. 方法参数支持自动类型匹配，包括基本类型与包装类型的兼容。
 
  
