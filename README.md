@@ -32,21 +32,33 @@
    ```bash
    mvn clean install
 2. 在你的项目中添加依赖：
+   ```xml
    <dependency>
      <groupId>com.sun.tools</groupId>
      <artifactId>bean-method-executor</artifactId>
      <version>1.0.0</version>
    </dependency>
 3. 🚀  使用示例 
- 调用无参数方法： Object result = BeanMethodExecutor.invoke("myService", "noParamMethod");
- 调用带参数并返回类型的方法：String res = BeanMethodExecutor.invokeWithReturn(MyService.class, "process", String.class, "abc", 123);
- 调用返回 List<T> 的方法：List<User> users = BeanMethodExecutor.invokeListWithReturn("userService", "listUsers", User.class);
- 捕获异常统一处理 
+ 调用无参数方法
+``` java
+ Object result = BeanMethodExecutor.invoke("myService", "noParamMethod");
+```
+ 调用带参数并返回类型的方法
+``` java
+ String res = BeanMethodExecutor.invokeWithReturn(MyService.class, "process", String.class, "abc", 123);
+```
+ 调用返回 List<T> 的方法：
+``` java
+ List<User> users = BeanMethodExecutor.invokeListWithReturn("userService", "listUsers", User.class);
+```
+ 捕获异常统一处理
+``` java
   try {
       Object value = BeanMethodExecutor.invoke("myBean", "methodName", arg1, arg2);
    } catch (BeanMethodExecutionException e) {
        log.error("调用失败", e);
    }
+```
 4. 🧩 核心方法一览
    | 方法名                                                        | 描述                   |
    | ---------------------------------------------------------- | -------------------- |
