@@ -24,8 +24,22 @@
 ---
 
 ## 📦 快速集成
-
-### 方式一：安装到本地 Maven 仓库
+### 方式一：直接在项目中添加以下依赖
+ ``` xml
+ 	<repositories>
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+	
+	<dependency>
+            <groupId>com.github.LittleSunX</groupId>
+            <artifactId>bean-method-executor</artifactId>
+            <version>v1.0.1</version>
+    </dependency>
+  ``` 
+### 方式二：安装到本地 Maven 仓库
 
 1. 克隆代码并打包：
 
