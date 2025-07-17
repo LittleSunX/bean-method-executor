@@ -1,6 +1,6 @@
-package com.sun.util;
+package com.sun.tools.util;
 
-import com.sun.exception.BeanMethodExecutionException;
+import com.sun.tools.exception.BeanMethodExecutionException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.Assert;
@@ -178,9 +178,8 @@ public class BeanMethodExecutor {
      * @param methodName 方法名
      * @param args       参数值（允许为 null）
      * @return 匹配到的方法
-     * @throws NoSuchMethodException 当找不到匹配的方法时抛出
      */
-    private static Method resolveMethod(Class<?> clazz, String methodName, Object[] args) throws NoSuchMethodException {
+    private static Method resolveMethod(Class<?> clazz, String methodName, Object[] args) {
         // 构建更精确的缓存键，包含参数类型信息
         String cacheKey = buildCacheKey(clazz, methodName, args);
 

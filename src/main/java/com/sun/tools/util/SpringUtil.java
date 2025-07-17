@@ -1,4 +1,4 @@
-package com.sun.util;
+package com.sun.tools.util;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;

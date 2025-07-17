@@ -1,4 +1,4 @@
-package com.sun.exception;
+package com.sun.tools.exception;
 
 /**
  * 自定义异常类

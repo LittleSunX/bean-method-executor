@@ -1,6 +1,8 @@
 package com.sun.util;
 
-import com.sun.exception.BeanMethodExecutionException;
+import com.sun.tools.exception.BeanMethodExecutionException;
+import com.sun.tools.util.BeanMethodExecutor;
+import com.sun.tools.util.SpringUtil;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

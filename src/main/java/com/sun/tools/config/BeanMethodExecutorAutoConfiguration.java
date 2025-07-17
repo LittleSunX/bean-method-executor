@@ -1,6 +1,6 @@
-package com.sun.config;
+package com.sun.tools.config;
 
-import com.sun.util.SpringUtil;
+import com.sun.tools.util.SpringUtil;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
